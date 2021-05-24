@@ -1,5 +1,9 @@
 name: Comandos de shell
-on: [push]
+on: #[push]
+  #schedule:
+  #  - cron: "*/2 * * * *"
+  repository_dispatch:
+    types: [desde_curl]
 jobs:
   ejecutar-comandos-shell:
     runs-on: ubuntu-latest
