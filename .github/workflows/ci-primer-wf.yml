@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo cadena 
-        run: echo "Hello World"
+        run: eccho "Hello World"
       - name: scripts multilinea
         run: |
           node -v
