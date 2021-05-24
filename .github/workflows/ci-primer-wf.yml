@@ -5,10 +5,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo cadena 
-        run: eccho "Hello World"
+        run: echo "Hello World"
       - name: scripts multilinea
         run: |
           node -v
           npm -v
           ls -la
           cat /etc/os-release
+      - name: python command
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())          
+  comandos-windows:
+    runs-on: windows-latest
+    steps:
+      - name: PowerShell
+        run: Get-Location
+      - name: bash
+        run: pwd
