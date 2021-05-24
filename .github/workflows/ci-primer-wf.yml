@@ -1,0 +1,14 @@
+name: Comandos de shell
+on: [push]
+jobs:
+  ejecutar-comandos-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo cadena 
+        run: echo "Hello World"
+      - name: scripts multilinea
+        run: |
+          node -v
+          npm -v
+          ls -la
+          cat /etc/os-release
