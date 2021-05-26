@@ -1,0 +1,19 @@
+name: Variables de Entorno
+on: push
+
+env:
+  WF_ENV: Disponible en todos los jobs
+
+jobs:
+  log-env: 
+    runs-on: ubuntu-latest
+    env:
+      JOB_ENV: Disponible en todos los stepsde log-env
+    steps:
+      - name: Log Variables Entorno
+        env:
+          STEP_ENV: Disponible para este step
+          run: |
+            echo "WF_ENF: ${WF_ENV}"
+            echo "JOB_ENV: ${JOB_ENV}"
+            echo "STEP_ENV: ${STEP_ENV}
