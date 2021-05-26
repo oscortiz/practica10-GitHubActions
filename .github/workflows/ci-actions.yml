@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Mostrar contenido del directorio 
         run: |
-          ls-la
+          ls -la
       - name: Clonar Repositorio
         uses: actions/checkout@2
       - name: Mostrar contenido del directorio Después
         run: |
-          ls-la
+          ls -la
           
