@@ -10,7 +10,7 @@ jobs:
           java -version
           mvn --version 
       - name: Descarga Repositorio
-        uses: |
+        run: |
           git clone https://github.com/wakaleo/game-of-life.git .
       - name: Tests Maven
         run: |
