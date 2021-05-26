@@ -1,0 +1,16 @@
+name: Actions en GitHub
+on: push
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar contenido del directorio 
+        run: |
+          ls-la
+      - name: Clonar Repositorio
+        uses: actions/checkout@2
+      - name: Mostrar contenido del directorio Después
+        run: |
+          ls-la
+          
