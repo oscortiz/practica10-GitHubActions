@@ -1,0 +1,18 @@
+name: Game of life testing
+on: push
+
+jobs:
+  game-of-life-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar Versiones Java y Maven
+        run: |
+          java -version
+          mvn --version 
+      - name: Descarga Repositorio
+        uses: |
+          git clone https://github.com/wakaleo/game-of-life.git .
+      - name: Tests Maven
+        run: |
+          mvn test   
+
