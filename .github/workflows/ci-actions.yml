@@ -15,9 +15,10 @@ jobs:
           ls -la
       - name: Crear Archivo Random
         run: |
+          git config --global user.email "oscortiz@gmail.com
+          git config --global user.name "oscortiz"
           echo $RANDOM >> random.txt
           git add random.txt
           git commit -m "Añadido Random File"
           git push     
-          
-             
+
